@@ -26,6 +26,8 @@ while count < 3:
 # Configure networking
 oled.text('net', 0, 10)
 oled.show()
+ap_if = network.WLAN(network.AP_IF)
+ap_if.active(False)
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(True)
 sta_if.connect('DEUS','ktm3250a')
